@@ -54,6 +54,17 @@ table Measure
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Var = ```
+			
+			Var SalesTarget = 100000
+			Var Variance_=[Total EV Sales]-SalesTarget
+			RETURN Variance_
+			
+			```
+		lineageTag: 4401f6e9-c20f-46be-bc0a-d3ff5da044c3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column
 		formatString: 0
 		lineageTag: 3640e24a-bda6-40fd-a98c-4a002750eede
