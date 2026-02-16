@@ -1,0 +1,101 @@
+table EV_Sales
+	lineageTag: 40e0c271-a9fe-4d75-8194-b13061f49236
+
+	column region
+		dataType: string
+		lineageTag: c831a800-fe76-4e1a-bb50-973e4873d2dd
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: 878753a1-54c7-4441-bf64-aca39c87b35c
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column parameter
+		dataType: string
+		lineageTag: 0412f2be-b005-4365-a7a6-dcae9646fdac
+		summarizeBy: none
+		sourceColumn: parameter
+
+		annotation SummarizationSetBy = Automatic
+
+	column mode
+		dataType: string
+		lineageTag: c0f8fb71-ef01-4acc-a12e-2a688332a400
+		summarizeBy: none
+		sourceColumn: mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column powertrain
+		dataType: string
+		lineageTag: 84710afa-004e-4d17-ba97-c6863f83ed74
+		summarizeBy: none
+		sourceColumn: powertrain
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: c1dd5633-1415-4b0c-bbc1-340639882440
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = User
+
+	column unit
+		dataType: string
+		lineageTag: 62cd5587-2b1e-4a10-898e-c667a5ea218e
+		summarizeBy: none
+		sourceColumn: unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: double
+		lineageTag: ece7006c-ffd9-4987-b04f-1832fbf8cb0b
+		summarizeBy: sum
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Day_Date =
+			
+			VAR Yr = 'EV_Sales'[year]
+			VAR StartDate = DATE(Yr, 1, 1)
+			VAR EndDate   = DATE(Yr, 12, 31)
+			VAR DaysSpan  = EndDate - StartDate
+			RETURN
+			    StartDate + RANDBETWEEN(0, DaysSpan)
+		formatString: General Date
+		lineageTag: 0f7e9128-4ca3-4935-9e73-1e4b6b77f41f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EV_Sales = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Adeda\Downloads\archive (11)\IEA-EV-dataEV salesHistoricalCars.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"region", type text}, {"category", type text}, {"parameter", type text}, {"mode", type text}, {"powertrain", type text}, {"year", Int64.Type}, {"unit", type text}, {"value", type number}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

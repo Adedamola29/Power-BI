@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "5249a8fe03bca908556e",
+  "position": {
+    "x": 0,
+    "y": 159.58005249343833,
+    "z": 5000,
+    "height": 149.08136482939634,
+    "width": 1600,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure"
+                    }
+                  },
+                  "Property": "Total EV Sales"
+                }
+              },
+              "queryRef": "Measure.Total EV Sales",
+              "nativeQueryRef": "Total EV Sales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure"
+                    }
+                  },
+                  "Property": "Total Electricity Demand"
+                }
+              },
+              "queryRef": "Measure.Total Electricity Demand",
+              "nativeQueryRef": "Total Electricity Demand"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure"
+                    }
+                  },
+                  "Property": "Total EV Stock"
+                }
+              },
+              "queryRef": "Measure.Total EV Stock",
+              "nativeQueryRef": "Total EV Stock"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure"
+                    }
+                  },
+                  "Property": "EV Sales Share(%)"
+                }
+              },
+              "queryRef": "Measure.EV Sales Share(%)",
+              "nativeQueryRef": "EV Sales Share(%)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure"
+                    }
+                  },
+                  "Property": "EV Stock Share(%)"
+                }
+              },
+              "queryRef": "Measure.EV Stock Share(%)",
+              "nativeQueryRef": "EV Stock Share(%)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Measure"
+                  }
+                },
+                "Property": "Total EV Sales"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

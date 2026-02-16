@@ -1,0 +1,73 @@
+table Measure
+	lineageTag: 0f76d705-c378-4784-9e68-8eee614fc160
+
+	measure 'Total EV Sales' = ```
+			
+			CALCULATE(
+			    SUM('EV_Sales'[value]),
+			    'EV_Sales'[parameter] = "EV Sales"
+			)
+			
+			
+			```
+		lineageTag: 3cb59e5a-5ffa-496f-ae1a-bb8851342d12
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Electricity Demand' =
+			
+			CALCULATE(
+			    SUM('EV_Sales'[value]),
+			    'EV_Sales'[parameter] = "Electricity demand"
+			)
+		lineageTag: 9aae726c-cbae-4827-8bc9-f772e1049bac
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total EV Stock' =
+			
+			CALCULATE(
+			    SUM('EV_Sales'[value]),
+			    'EV_Sales'[parameter] = "EV Stock"
+			)
+		lineageTag: 55577784-8617-40ae-86a4-2b7baaf916b0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'EV Sales Share(%)' =
+			
+			CALCULATE(
+			    AVERAGE('EV_Sales'[value]),
+			    'EV_Sales'[parameter] = "EV Sales Share"
+			)
+		lineageTag: 60a517d8-9d90-4bf7-8443-fb6ee47792c2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'EV Stock Share(%)' =
+			
+			CALCULATE(
+			    AVERAGE('EV_Sales'[value]),
+			    'EV_Sales'[parameter] = "EV Stock Share"
+			)
+		lineageTag: f4e4b165-c0e7-4992-9a3e-3f34337f427f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: 3640e24a-bda6-40fd-a98c-4a002750eede
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Measure = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = b183e85a4c8a40218804b5e22d08e7bf
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

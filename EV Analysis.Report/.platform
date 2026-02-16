@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "EV Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "30bd4e86-37a6-4c0b-a848-bf5a88894131"
+  }
+}

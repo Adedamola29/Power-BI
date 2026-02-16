@@ -1,0 +1,222 @@
+table DateTable
+	lineageTag: a1866727-351d-43b0-8dc2-3a0150f786ba
+
+	column Date
+		formatString: General Date
+		lineageTag: 0d78d4c3-b7d5-4af5-bc55-c79a4c6d26d6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 6b5dd2bb-54ca-4f2d-b904-60479dd9ea5c
+			defaultHierarchy: LocalDateTable_35dfcd82-0e37-410f-a0b7-5fe0459ad0d6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: e0cce69c-75eb-40af-8bf2-2058bf5a0a85
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: 5d71aa6b-7a54-40ef-99ac-812593e1796f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		lineageTag: 82ef22b4-15a3-4002-986e-df2885de09e3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Name]
+		sortByColumn: 'Month Number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Short'
+		lineageTag: 8e51bba4-d7c1-4d20-b66d-f0cb59154265
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Short]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year-Month
+		lineageTag: 14c1f7a8-f52c-4f97-979c-f36c0991a4be
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year-Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: f975c999-1cf0-44d5-aacc-588cf0908c59
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year-Quarter
+		lineageTag: 9abcd2b8-850e-43cc-a1b5-aa97f7609a4c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year-Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		formatString: 0
+		lineageTag: 45542927-4b0c-4b29-95b8-1a1b2bd76b40
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weekday Name'
+		lineageTag: 7521b409-bfcf-4ae8-b49c-686eaacbee50
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weekday Short'
+		lineageTag: 49fcfade-3e63-4afd-a543-f67e63589209
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday Short]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week Number'
+		formatString: 0
+		lineageTag: 0675ba3f-436d-46f9-82a4-9b9fd51c8e83
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Week Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		formatString: 0
+		lineageTag: 30b542ef-048d-4283-be1c-9a646b3a7504
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Weekend'
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 40e11c28-bcab-4459-9d5a-e26405168596
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Is Weekend]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Weekday'
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8e5ef77a-4615-4aac-a500-ddc0bd817e9c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Is Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Today'
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2be45fcf-ef21-4424-af0d-261ff04b46bf
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Is Today]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Year'
+		lineageTag: 7fb49879-d7cf-4251-905a-dc9933430949
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fiscal Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Month'
+		formatString: 0
+		lineageTag: ad1bbcf8-180f-40bc-97a2-9ef91a20a290
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Fiscal Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Current Year'
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2c65979c-7dea-4845-88dc-a394eee16cb8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Is Current Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Current Month'
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 866d63b7-9905-4f58-bfd3-85919d71a176
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Is Current Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Current Quarter'
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ef6f0e86-8193-4920-bb5c-562f2b1fda30
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Is Current Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DateTable = calculated
+		mode: import
+		source = ```
+				
+				ADDCOLUMNS (
+				    CALENDAR (DATE(2010,1,1), DATE(2030,12,31)),  -- Set appropriate range
+				    "Year", YEAR([Date]),
+				    "Month Number", MONTH([Date]),
+				    "Month Name", FORMAT([Date], "MMMM"),
+				    "Month Short", FORMAT([Date], "MMM"),
+				    "Year-Month", FORMAT([Date], "YYYY-MM"),
+				    "Quarter", "Q" & FORMAT([Date], "Q"),
+				    "Year-Quarter", FORMAT([Date], "YYYY") & "-Q" & FORMAT([Date], "Q"),
+				    "Weekday", WEEKDAY([Date], 2),  -- 1=Sun..Sat, 2=Mon..Sun
+				    "Weekday Name", FORMAT([Date], "dddd"),
+				    "Weekday Short", FORMAT([Date], "ddd"),
+				    "Week Number", WEEKNUM([Date], 2),  -- ISO-compatible week number
+				    "Day", DAY([Date]),
+				    "Is Weekend", IF(WEEKDAY([Date],2) > 5, TRUE(), FALSE()),
+				    "Is Weekday", IF(WEEKDAY([Date],2) <= 5, TRUE(), FALSE()),
+				    "Is Today", IF([Date] = TODAY(), TRUE(), FALSE()),
+				    "Fiscal Year", IF(MONTH([Date]) >= 4, YEAR([Date]) & "-" & RIGHT(YEAR([Date])+1,2), YEAR([Date])-1 & "-" & RIGHT(YEAR([Date]),2)),
+				    "Fiscal Month", IF(MONTH([Date]) >= 4, MONTH([Date]) - 3, MONTH([Date]) + 9),
+				    "Is Current Year", YEAR([Date]) = YEAR(TODAY()),
+				    "Is Current Month", FORMAT([Date], "YYYY-MM") = FORMAT(TODAY(), "YYYY-MM"),
+				    "Is Current Quarter", QUARTER([Date]) = QUARTER(TODAY()) && YEAR([Date]) = YEAR(TODAY())
+				)
+				
+				```
+
+	annotation PBI_Id = 7d4fb13f602244d2a50d78bbbb171190
+

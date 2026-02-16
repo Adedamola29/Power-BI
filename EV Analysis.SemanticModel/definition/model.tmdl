@@ -1,0 +1,22 @@
+model Model
+	culture: en-CA
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-CA
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["EV_Sales"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode"]
+
+ref table EV_Sales
+ref table DateTable
+ref table DateTableTemplate_954ffa5a-58f8-4144-83f1-21598ed8f4e7
+ref table LocalDateTable_35dfcd82-0e37-410f-a0b7-5fe0459ad0d6
+ref table Measure
+
+ref cultureInfo en-CA
+

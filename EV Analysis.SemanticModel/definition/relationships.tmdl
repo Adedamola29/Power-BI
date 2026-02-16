@@ -1,0 +1,9 @@
+relationship 6b5dd2bb-54ca-4f2d-b904-60479dd9ea5c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DateTable.Date
+	toColumn: LocalDateTable_35dfcd82-0e37-410f-a0b7-5fe0459ad0d6.Date
+
+relationship 30d9f743-f8a8-b053-a6e6-573191ad1895
+	fromColumn: EV_Sales.Day_Date
+	toColumn: DateTable.Date
+
