@@ -65,6 +65,16 @@ table Measure
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Total EV Sales Canada' =
+			
+			CALCULATE(
+			    SUM('EV_Sales'[value]),
+			    'EV_Sales'[region] = "Canada"
+			)
+		lineageTag: b36de869-cf8a-4df5-97bb-5549e462be98
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column
 		formatString: 0
 		lineageTag: 3640e24a-bda6-40fd-a98c-4a002750eede
